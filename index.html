@@ -10,15 +10,31 @@
     </head>
 
 
-    <body style="background-color: darkkhaki; font-family: Rubik Glitch, Rubik Burned, Helvetica, Noto Sans, sans-serif, Linefont, system-ui;">
-        <h1 style="margin: 4px;">Welcome to my webOS</h1>
-        <h2>Introduction<br>.<br>.<br>.</h2>
+    <body style="background-color: darkkhaki; font-family: Rubik Glitch, Rubik Burned, Helvetica, Noto Sans, sans-serif, Linefont, system-ui; background-image: url(./my-background.jpg); background-size: cover; height: 100vh;">
+        <div style="position: absolute; top: 0%; left: 0%; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.25); color: #fff; justify-content: space-between;">
+            <p style="margin-left: 10px;">
+              webOS
+            </p>
+            <p id="timeElement" style="margin-right: 16px;">
+              Time
+            </p>
+          </div>
 
-        <p>Ignore that... <br> LOOK AT THIS SEA <dfn>BUNNY</dfn> ITS SOOO CUTE</p>
-        <img style="width: 400px; height: 300px; border-radius: 8px; object-fit: cover;" src="sea-bunny.jpg" />
+        <div style="position: absolute; top: 50%; left:50%; transform: translate(-50%, -50%); padding: 10px; border: solid; width: 400px;">
+            <h1 style="margin: 4px;">Welcome to my webOS</h1>
+            <h2>Introduction<br>.<br>.<br>.</h2>
 
-        <p>Uhh... Join Stardance Insta ig...</p>
-        <a href="https://www.instagram.com/starthackclub/">Stardance Instagram</a>
+            <p>Ignore that... <br> LOOK AT THIS SEA <dfn>BUNNY</dfn> ITS SOOO CUTE</p>
+            <img style="width: 400px; height: 300px; border-radius: 8px; object-fit: cover;" src="sea-bunny.jpg" alt="Sea BUNNY">
 
+            <p>Uhh... Join Stardance Insta ig...</p>
+            <a href="https://www.instagram.com/starthackclub/">Stardance Instagram</a>
+        </div>
+
+        <script>
+            function updateTime () {document.querySelector("#timeElement").innerHTML = new Date().toLocaleString()}
+            updateTime();
+            setInterval(updateTime, 1000);
+        </script>
     </body>
 </html>
